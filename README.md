@@ -11,7 +11,7 @@ Here you can check the app preview: [Chattie - chatroom app](https://chattie-cha
 ## 🛠 Setup
 
 1. Make sure you have Node.js v14.16.0 and yarn v1.22.10 or above installed.
-2. Clone this repo using: `git clone https://github.com/ArtSkw/`.
+2. Clone this repo using: `git clone https://github.com/ArtSkw/chattie-chatroom-app.git`.
 3. Move to the project folder: `cd chattie-app`.
 4. Run `yarn` to initiate the package manager.
 
