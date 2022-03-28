@@ -4,7 +4,7 @@
     justify-center items-center h-screen sm:px-4 w-full"
   >
     <div
-      class="bg-white p-5 sm:p-16 sm:rounded-2xl sm:drop-shadow-2xl max-w-xl
+      class="bg-white p-5 sm:p-16 sm:rounded-2xl sm:drop-shadow-xl max-w-xl
       mx-auto w-full"
     >
       <router-link

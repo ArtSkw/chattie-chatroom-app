@@ -3,7 +3,7 @@ import App from './App.vue';
 import router from './router';
 
 // importing Tailwind styles
-import '../public/output.css';
+import './tailwind/output.css';
 
 // importing Firebase auth service
 import { projectAuth } from './firebase/config';
