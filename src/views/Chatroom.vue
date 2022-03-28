@@ -4,7 +4,7 @@
     sm:justify-center items-center h-screen sm:p-4 w-full"
   >
     <div
-      class="bg-white py-2 px-0 sm:rounded-2xl sm:drop-shadow-2xl max-w-7xl
+      class="bg-white py-2 px-0 sm:rounded-2xl sm:drop-shadow-xl max-w-7xl
       mx-auto sm:overflow-hidden w-full"
     >
       <Navbar />

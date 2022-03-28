@@ -2,7 +2,7 @@
   <nav
     v-if="user"
     class="bg-white flex justify-between items-center top-0 fixed sm:relative
-    pt-3 py-3 px-4 sm:pt-5 sm:px-6 sm:pb-6"
+    pt-3 py-3 px-4 sm:pt-5 sm:px-6 sm:pb-6 w-full"
   >
     <div class="flex items-center justify-between w-full">
       <router-link :to="{ name: 'Welcome' }">
@@ -34,7 +34,7 @@
           </button>
           <ul
             v-if="showMenu"
-            class="dropdown-menu absolute bg-white drop-shadow-md rounded-lg text-zinc-900
+            class="border dropdown-menu absolute bg-white drop-shadow-md rounded-lg text-zinc-900
             w-32 right-0 mt-2"
           >
             <li @click="handleDelete">
