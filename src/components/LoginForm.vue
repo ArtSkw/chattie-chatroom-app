@@ -1,5 +1,5 @@
 <template>
-  <form @submit.prevent="handleSubmit">
+  <form @submit.prevent="handleLogin">
     <input
       type="email"
       required
@@ -36,7 +36,7 @@ export default {
     const { error, login } = useLogin();
 
     // Logging in
-    const handleSubmit = async () => {
+    const handleLogin = async () => {
       await login(email.value, password.value);
       if (!error.value) {
         context.emit('login');
@@ -46,7 +46,7 @@ export default {
     return {
       email,
       password,
-      handleSubmit,
+      handleLogin,
       error,
     };
   },

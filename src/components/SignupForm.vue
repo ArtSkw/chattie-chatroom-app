@@ -1,5 +1,5 @@
 <template>
-  <form @submit.prevent="handleSubmit">
+  <form @submit.prevent="handleSignup">
     <input
       type="text"
       required
@@ -44,7 +44,7 @@ export default {
     const { error, signup } = useSignup();
 
     // Signing up
-    const handleSubmit = async () => {
+    const handleSignup = async () => {
       await signup(email.value, password.value, displayName.value);
       if (!error.value) {
         context.emit('signup');
@@ -55,7 +55,7 @@ export default {
       displayName,
       email,
       error,
-      handleSubmit,
+      handleSignup,
       password,
     };
   },

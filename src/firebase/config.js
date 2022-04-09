@@ -2,7 +2,7 @@ import firebase from 'firebase/compat/app';
 import 'firebase/compat/firestore';
 import 'firebase/compat/auth';
 
-// main DB config
+// Main DB config
 const firebaseConfig = {
   apiKey: 'AIzaSyCq1udlArxAoHlZTmvio__g52ecp3k4QvQ',
   authDomain: 'chattie-chatroom-app.firebaseapp.com',
@@ -12,7 +12,7 @@ const firebaseConfig = {
   appId: '1:805385982037:web:9f316913cd0c5daab6c4dc',
 };
 
-// initialize Firebase
+// Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
 const projectAuth = firebase.auth();
