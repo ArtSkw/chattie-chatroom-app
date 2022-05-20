@@ -5,6 +5,9 @@ import router from './router';
 // importing Tailwind styles
 import './assets/tailwind.css';
 
+// importing custom animations
+import './assets/animations.css';
+
 // importing Firebase auth service
 import { projectAuth } from './firebase/config';
 

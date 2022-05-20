@@ -6,19 +6,21 @@
       ref="messages"
       class="messages overflow-auto pt-20 pb-24 sm:py-0"
     >
-      <div v-for="doc in formattedDocuments" :key="doc.id" class="mb-4">
-        <div class="flex mt-4 mb-2 items-center">
-          <span class="font-semibold mr-1.5">{{ doc.name }}</span
-          ><span class="text-xs text-gray-400 -mb-0.5">{{
-            doc.createdAt
-          }}</span>
+      <transition-group tag="div" name="messages" appear>
+        <div v-for="doc in formattedDocuments" :key="doc.id" class="mb-4">
+          <div class="flex mt-4 mb-2 items-center">
+            <span class="font-semibold mr-1.5">{{ doc.name }}</span
+            ><span class="text-xs text-gray-400 -mb-0.5">{{
+              doc.createdAt
+            }}</span>
+          </div>
+          <span
+            class="inline-block bg-stone-100 rounded-lg p-3 text-sm"
+            data-v-4bb1e4fd=""
+            >{{ doc.message }}</span
+          >
         </div>
-        <span
-          class="inline-block bg-stone-100 rounded-lg p-3 text-sm"
-          data-v-4bb1e4fd=""
-          >{{ doc.message }}</span
-        >
-      </div>
+      </transition-group>
     </div>
   </div>
 </template>

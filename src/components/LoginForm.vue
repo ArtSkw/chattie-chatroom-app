@@ -14,18 +14,50 @@
       v-model="password"
       class="border border-gray-200 border-solid h-3 my-2 py-6 px-3 rounded-lg w-full"
     />
-    <div v-if="error" class="mb-2 text-red-500 text-sm">{{ error }}</div>
+    <transition name="fadeLeft">
+      <div v-if="error" class="mb-2 text-red-500 text-sm">{{ error }}</div>
+    </transition>
     <button
-      class="bg-indigo-500 hover:bg-indigo-600 active:bg-indigo-600 font-semibold mt-2 py-3
-      px-3 rounded-lg text-center text-white transition w-full"
+      v-if="!inProgress"
+      class="bg-indigo-500 hover:bg-indigo-600 active:bg-indigo-600 font-semibold mt-2 py-3 px-3
+      rounded-lg text-center text-white transition w-full"
     >
       Log in
+    </button>
+    <button
+      v-if="inProgress"
+      class="bg-indigo-700 inline-flex justify-center items-center font-semibold mt-2 py-3 px-3
+      rounded-lg text-center text-white transition w-full"
+    >
+      <svg
+        class="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+      >
+        <circle
+          class="opacity-25"
+          cx="12"
+          cy="12"
+          r="10"
+          stroke="currentColor"
+          stroke-width="4"
+        ></circle>
+        <path
+          class="opacity-75"
+          fill="currentColor"
+          d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042
+          1.135 5.824 37.938l3-2.647z"
+        ></path>
+      </svg>
+      Logging in...
     </button>
   </form>
 </template>
 
 <script>
 import { ref } from 'vue';
+
 import useLogin from '../composables/useLogin';
 
 export default {
@@ -33,7 +65,7 @@ export default {
     const email = ref('');
     const password = ref('');
 
-    const { error, login } = useLogin();
+    const { error, inProgress, login } = useLogin();
 
     // Logging in
     const handleLogin = async () => {
@@ -44,6 +76,7 @@ export default {
     };
 
     return {
+      inProgress,
       email,
       password,
       handleLogin,
