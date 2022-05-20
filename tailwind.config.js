@@ -1,7 +1,11 @@
 module.exports = {
-  content: ['./public/**/*.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
+  content: ['./public/*.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        headline: ['Radio Canada', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
 };

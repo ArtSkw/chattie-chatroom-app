@@ -1,0 +1,91 @@
+/* route transition */
+.route-enter-from {
+  opacity: 0;
+  transform: translateX(100px);
+}
+
+.route-enter-active {
+  transition: all 0.3s ease-out;
+}
+
+.route-leave-to {
+  opacity: 0;
+  transform: translateX(-100px);
+}
+
+.route-leave-active {
+  transition: all 0.3s ease-in;
+}
+
+/* messages transition */
+.messages-enter-from {
+  opacity: 0;
+  transform: scale(0.6);
+}
+
+.messages-enter-active {
+  transition: all 0.4s ease;
+}
+
+.messages-leave-to {
+  opacity: 0;
+  transform: scale(0.6);
+}
+
+.messages-leave-active {
+  transition: all 0.4s ease;
+}
+
+.messages-move {
+  transition: all 0.3s ease;
+}
+
+/* fadeLeft transition */
+.fadeLeft-enter-from {
+  opacity: 0;
+  transform: translateX(-60px);
+}
+
+.fadeLeft-enter-active {
+  animation: wobble 0.5s ease;
+}
+
+.fadeLeft-leave-to {
+  opacity: 0;
+  transform: translateX(-60px);
+}
+
+.fadeLeft-leave-active {
+  transition: all 0.3s ease;
+}
+
+@keyframes wobble {
+  0% {
+    transform: translateX(-60px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+  60% {
+    transform: translateY(4px);
+    opacity: 1;
+  }
+  70% {
+    transform: translateY(-4px);
+    opacity: 1;
+  }
+  80% {
+    transform: translateY(2px);
+    opacity: 1;
+  }
+  90% {
+    transform: translateY(-2px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}

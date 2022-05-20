@@ -13,7 +13,7 @@
         />
       </router-link>
       <div class="sm:ml-0 ml-auto mr-auto text-center sm:text-left">
-        <p class="font-semibold sm:text-lg text-zinc-900">
+        <p class="font-headline font-medium sm:text-lg text-zinc-900">
           Hi {{ user.displayName }}! 👋
         </p>
         <p class="text-sm text-gray-500 mt-1">

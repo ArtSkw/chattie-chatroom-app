@@ -10,8 +10,8 @@
     ></textarea>
     <button
       @click.prevent="sendMessage"
-      class="bg-indigo-500 hover:bg-indigo-600 active:bg-indigo-600 flex justify-center items-center
-      flex-auto ml-3 py-2.5 px-3 rounded-lg text-white w-11 transition absolute"
+      class="bg-emerald-500 hover:bg-emerald-600 active:bg-emerald-600 flex justify-center
+      items-center flex-auto ml-3 py-2.5 px-3 rounded-lg text-white w-11 transition absolute"
       style="right: 1.9em; top: 1.9em"
     >
       <span class="material-icons">send</span>
@@ -22,9 +22,10 @@
 
 <script>
 import { ref } from 'vue';
+import { timestamp } from '../firebase/config';
+
 import useCollection from '../composables/useCollection';
 import getUser from '../composables/getUser';
-import { timestamp } from '../firebase/config';
 
 export default {
   setup() {
