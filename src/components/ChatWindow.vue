@@ -20,6 +20,10 @@
             >{{ doc.message }}</span
           >
         </div>
+        <div v-if="formattedDocuments.length === 0">
+          <p class="text-gray-400 text-center text-sm py-48 sm:py-32">No messages there yet.
+            Time for a chit-chat!</p>
+        </div>
       </transition-group>
     </div>
   </div>
