@@ -6,7 +6,7 @@ Currently the app connects with the initial database stored on Firestore Cloud, 
 
 Here you can check the app preview: [Chattie - chatroom app](https://chattie-chatroom-app.web.app/)
 
-![Chat app screenshot](https://i.ibb.co/7yQgh0B/chattie-screenshot.png)
+![Chat app screenshot](https://i.ibb.co/bX9YHqm/chattie-app-preview.png)
 
 ## 🛠 Setup
 
