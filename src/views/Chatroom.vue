@@ -1,6 +1,6 @@
 <template>
   <div
-    class="sm:bg-gradient-to-r sm:from-violet-50 sm:to-purple-200 flex flex-col
+    class="sm:bg-[url('../static/chattie-background.svg')] bg-cover flex flex-col
     sm:justify-center items-center h-screen sm:p-4 w-full"
   >
     <div

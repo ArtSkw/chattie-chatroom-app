@@ -3,7 +3,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        headline: ['Radio Canada', 'sans-serif'],
+        headline: ['Lato', 'sans-serif'],
       },
     },
   },
