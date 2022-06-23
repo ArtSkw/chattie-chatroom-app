@@ -1,8 +1,8 @@
 <template>
   <nav
     v-if="user"
-    class="bg-white flex justify-between items-center top-0 fixed sm:relative
-    pt-3 py-3 px-4 sm:pt-5 sm:px-6 sm:pb-6 w-full"
+    class="bg-white flex justify-between items-center top-0 fixed sm:relative pt-3 py-3 px-4 sm:pt-5
+    sm:px-6 sm:pb-6 w-full"
   >
     <div class="flex items-center justify-between w-full">
       <router-link :to="{ name: 'Welcome' }">
@@ -27,27 +27,33 @@
           <button
             v-on:clickout="showMenu = false"
             @click="showMenu = !showMenu"
-            class="bg-stone-100 hover:bg-stone-200 text-indigo-600 font-semibold
-            -mr-0.5 p-3 sm:p-4 rounded-lg inline-flex items-center transition"
+            class="bg-stone-100 hover:bg-stone-200 text-indigo-600 font-semibold -mr-0.5 p-3 sm:p-4
+            rounded-lg inline-flex items-center transition"
           >
             <span class="material-icons">menu</span>
           </button>
           <ul
             v-if="showMenu"
             class="border dropdown-menu absolute bg-white drop-shadow-md rounded-lg text-zinc-900
-            w-32 right-0 mt-2"
+            w-auto whitespace-nowrap right-0 mt-2"
           >
             <li @click="handleDelete">
               <a
-                class="hover:bg-stone-100 text-sm rounded-lg p-4 block whitespace-no-wrap"
+                class="flex items-center hover:bg-stone-100 text-sm rounded-lg p-4 block
+                whitespace-no-wrap"
                 href="#"
-                >Clear the chat</a
+                >
+                <span class="material-icons text-base text-red-600
+                mr-2">remove_circle_outline</span>
+                Clear the chat</a
               >
             </li>
             <li @click="handleLogout">
               <a
-                class="hover:bg-stone-100 text-sm rounded-lg -mt-1 p-4 block whitespace-no-wrap"
+                class="flex items-center hover:bg-stone-100 text-sm rounded-lg -mt-1 p-4 block
+                whitespace-no-wrap"
                 href="#"
+                ><span class="material-icons text-base text-indigo-600 mr-2">logout</span
                 >Logout</a
               >
             </li>
