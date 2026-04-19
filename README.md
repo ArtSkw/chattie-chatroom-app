@@ -2,7 +2,7 @@
 
 The chat app uses VueJS (v3) for front-end + Firestore Cloud for all back-end logic from Firebase.
 
-Currently the app connects with the initial database stored on Firestore Cloud, although you can switch and configure your own databse in `src/firebase/config.js` - check [Firestore documentation](https://firebase.google.com/docs/firestore/quickstart) for more details.
+Currently, the app connects with the initial database stored on Firestore Cloud, although you can switch and configure your own database in `src/firebase/config.js` - check [Firestore documentation](https://firebase.google.com/docs/firestore/quickstart) for more details.
 
 Here you can check the app preview: [Chattie - chatroom app](https://chattie-chatroom-app--pr7-navbar-icons-update-05drdin3.web.app/)
 
